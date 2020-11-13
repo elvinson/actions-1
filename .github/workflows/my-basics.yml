@@ -18,4 +18,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: deploy info
-        runs: echo 'deploy beggining'
+        run: echo 'deploy beggining'
