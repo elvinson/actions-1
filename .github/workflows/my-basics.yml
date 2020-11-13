@@ -1,10 +1,15 @@
 # hello
 # this my first actions workflow
 name: my-actions
+
+env:
+  author: elvin
+
 on:
   push:
     branches: 
       - main
+
 jobs:
   greetings:
     runs-on: ubuntu-latest
@@ -15,7 +20,10 @@ jobs:
         run: echo "Whats, your name?"
         
   deploy_baby:
+    needs: [greetings]
     runs-on: ubuntu-latest
     steps:
       - name: deploy info
-        run: echo 'deploy beggining'
+        run: |
+          echo 'deploy beggining'
+          echo "author is ${{env.author}}"
