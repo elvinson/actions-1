@@ -1,0 +1,21 @@
+# hello
+# this my first actions workflow
+name: my-actions
+on:
+  push:
+    branches: 
+      - main
+jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: echo "Hello World!"
+      - name: question
+        run: echo "Whats, your name?"
+        
+  deploy_baby:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy info
+        runs: echo 'deploy beggining'
