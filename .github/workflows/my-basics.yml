@@ -16,8 +16,13 @@ jobs:
     steps:
       - name: hello
         run: echo "Hello World!"
+        
       - name: question
         run: echo "Whats, your name?"
+        
+      - name: clone repo
+        uses: actions/checkout@v1
+        
       - name: list dir
         run: ls -la
         
