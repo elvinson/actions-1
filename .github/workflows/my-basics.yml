@@ -18,6 +18,8 @@ jobs:
         run: echo "Hello World!"
       - name: question
         run: echo "Whats, your name?"
+      - name: list dir
+        run: ls -la
         
   deploy_baby:
     needs: [greetings]
